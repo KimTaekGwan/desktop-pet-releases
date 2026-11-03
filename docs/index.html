@@ -90,12 +90,11 @@
   <ol>
     <li data-ko><a href="https://github.com/KimTaekGwan/desktop-pet-releases/releases/latest">Releases</a>에서 zip을 받아 풀고 <code>DesktopPet.app</code>을 응용 프로그램 폴더에 옮깁니다.</li>
     <li data-en>Grab the zip from <a href="https://github.com/KimTaekGwan/desktop-pet-releases/releases/latest">Releases</a>, unzip, move <code>DesktopPet.app</code> to Applications.</li>
-    <li data-ko>첫 실행 때 "확인되지 않은 개발자" 경고가 뜨면 <b>우클릭 → 열기</b>. 또는 터미널에서:</li>
-    <li data-en>If macOS says it can't verify the developer, <b>right-click → Open</b>. Or in Terminal:</li>
+    <li data-ko>그냥 더블클릭하면 열려요. Developer ID 서명 + Apple 공증을 마쳐서 Gatekeeper 경고가 없어요.</li>
+    <li data-en>Just double-click it. Signed with a Developer ID and notarized by Apple — no Gatekeeper warning.</li>
   </ol>
-  <pre>xattr -d com.apple.quarantine /Applications/DesktopPet.app</pre>
-  <p class="meta" data-ko>Developer ID로 서명돼 있고 아직 공증은 하지 않았어요. 앱은 하루 한 번 이 저장소의 <code>latest.json</code>만 읽고, 그 외 어떤 것도 보내지 않아요.</p>
-  <p class="meta" data-en>Signed with a Developer ID, not yet notarized. The app reads this repo's <code>latest.json</code> once a day and sends nothing else.</p>
+  <p class="meta" data-ko>앱은 하루 한 번 이 저장소의 <code>latest.json</code>만 읽고, 그 외 어떤 것도 보내지 않아요.</p>
+  <p class="meta" data-en>The app reads this repo's <code>latest.json</code> once a day and sends nothing else.</p>
 
   <h2 data-ko>에이전트 연동 한 줄</h2><h2 data-en>One-line agent integration</h2>
   <pre># URL 스킴 / URL scheme

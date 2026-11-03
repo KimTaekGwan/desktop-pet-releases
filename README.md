@@ -10,10 +10,7 @@ macOS 메뉴바 데스크톱 펫 **Desktop Pet**의 공개 배포 저장소입�
 ## 설치
 
 1. Releases에서 `DesktopPet-<버전>.zip`을 받아 풀고 `DesktopPet.app`을 `응용 프로그램`(또는 `~/Applications`)에 옮깁니다.
-2. 첫 실행 때 "확인되지 않은 개발자" 경고가 뜨면 **우클릭 → 열기**를 하거나 터미널에서 아래를 실행합니다(앱은 Developer ID로 서명돼 있지만 공증은 아직 안 했습니다).
-   ```bash
-   xattr -d com.apple.quarantine /Applications/DesktopPet.app
-   ```
+2. 그냥 실행하면 됩니다. Developer ID로 서명하고 Apple 공증(notarization)까지 마친 빌드라 Gatekeeper 경고가 없습니다.
 3. macOS 13 이상. 위젯은 macOS 14 이상.
 
 ## 자동 업데이트
