@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desktop Pet — 업데이트 내역</title>
+<style>
+  :root { --bg:#fbfaf7; --fg:#1d1b22; --muted:#6b6878; --line:#e8e5de } @media (prefers-color-scheme: dark) { :root { --bg:#16151a; --fg:#f2f0ea; --muted:#a19dad; --line:#2c2b33 } }
+  body { margin:0; font-family:-apple-system,"Apple SD Gothic Neo",system-ui,sans-serif; background:var(--bg); color:var(--fg); line-height:1.65 }
+  main { max-width:760px; margin:0 auto; padding:24px 20px 80px } a { color:#5b8def; text-decoration:none }
+  h1 { letter-spacing:-.02em } h2 { margin-top:36px; border-top:1px solid var(--line); padding-top:20px } .d { color:var(--muted); font-size:14px; margin-left:8px }
+  li { margin:4px 0 }
+</style>
+</head>
+<body><main>
+<p><a href="../">← Desktop Pet</a></p>
+<h1>업데이트 내역 · What's new</h1>
+
+<h2>0.3.0 <span class="d">2026-11-03</span></h2>
+<ul>
+  <li>창 테두리·화면 가장자리에 <b>매달리기</b>: 끌어다 놓으면 고무줄처럼 붙고, 창을 따라가고, 가려지면 떨어졌다가 돌아오면 다시 붙어요. 우클릭 "가장자리에 걸기 / 떼어내기".</li>
+  <li>마우스를 0.5초 올리면 <b>손 흔들기</b>, <b>더블클릭</b>하면 크게 인사. 커서 <b>피하기 / 따라오기 / 무시</b> 모드, <b>제자리 고정</b>.</li>
+  <li>에이전트 상태에 <b>실패(✕)</b>·<b>검토 대기(👀)</b> 추가. 작업 중 상태가 N분 소식 없으면 자동 종료(설정). <b>pure-pet 호환 HTTP 작업 서버</b>(<code>POST /task/start|complete|fail|review</code>, 기본 꺼짐).</li>
+  <li>전역 단축키 5종(설정에서 녹음): Mini ⌃⌥P · 펫 보이기/숨기기 ⌃⌥H · <b>조용히 모드</b> ⌃⌥Q · <b>펫에게 한마디</b> ⌃⌥I · 활동 기록 ⌃⌥E.</li>
+  <li><b>말풍선 테마 6종</b>, <b>액세서리</b>(고깔모자·화관·안경·목도리 + 내 PNG), pure-pet 캐릭터 <b>가져오기/내보내기</b>.</li>
+  <li>펫끼리 <b>공 던지기</b>(맞으면 기절), <b>펫이 골라 주기</b>(룰렛·제비뽑기).</li>
+  <li>영어 UI(시스템 언어가 영어일 때), 하루 한 번 새 버전 확인, 설정 → "문제 보고…".</li>
+</ul>
+
+<h2>0.2.0 <span class="d">2026-11-02</span></h2>
+<ul>
+  <li>월드 레이어(바닥 높이·발판·최대 높이, 편집 모드, 프리셋), 노치 아일랜드(단계 모션·라이브 액티비티), macOS 데스크톱 위젯(펫 선택·밥/놀기 버튼).</li>
+  <li>설정 창 탭 6개, 표시 위치(앞/뒤/월페이퍼) 통합, 월페이퍼 모드 hover로 잡기, 발판 선반 표시.</li>
+  <li>Codex image_gen 캐릭터·성장 행·바탕화면 생성, 흰 배경 자동 제거, 격자 자동 맞춤, 갤러리, 온보딩, 활동 기록, 자동 숨김, 프로세스 감지, iCloud 동기화.</li>
+</ul>
+
+<h2>0.1.0 <span class="d">2026-11-02</span></h2>
+<ul><li>첫 버전: 투명 창 걷기, 다마고치 루프, 성장 단계, 알림, 배경 모드, Mini 패널, 캐릭터 시스템, <code>desktoppet://</code>·petctl·훅.</li></ul>
+</main></body></html>
