@@ -1,6 +1,7 @@
 {
-  "version": "0.3.0",
-  "url": "https://github.com/KimTaekGwan/desktop-pet-releases/releases/download/v0.3.0/DesktopPet-0.3.0.zip",
+  "version": "0.3.1",
+  "url": "https://github.com/KimTaekGwan/desktop-pet-releases/releases/download/v0.3.1/DesktopPet-0.3.1.zip",
   "notes": "https://kimtaekgwan.github.io/desktop-pet-releases/whats-new/",
-  "minimumOS": "13.0"
+  "minimumOS": "13.0",
+  "sha256": "af04dec0e2cba4456a2f1a1da0007e192ed762261cbd694224ade9174b6e9b99"
 }
