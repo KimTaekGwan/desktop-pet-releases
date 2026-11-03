@@ -30,6 +30,11 @@
   .pet { position:absolute; width:40px; height:40px; image-rendering:pixelated }
   .notch { position:absolute; left:50%; top:0; transform:translateX(-50%); width:90px; height:16px; background:#000; border-radius:0 0 10px 10px }
   .bubble { position:absolute; font-size:12px; background:#fff; color:#111; padding:3px 8px; border-radius:8px; border:1px solid rgba(0,0,0,.15); white-space:nowrap }
+  #demo { position:absolute; inset:0; width:100%; height:100%; touch-action:none }
+  .scene.live .pet, .scene.live .bubble { display:none }
+  .chars { display:flex; gap:8px; align-items:center; margin-top:10px; font-size:13px; color:var(--muted) }
+  .chars button { font:inherit; padding:3px 10px; border-radius:999px; border:1px solid var(--line); background:var(--card); color:var(--fg); cursor:pointer }
+  .chars button:hover { border-color:var(--accent) }
   .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:28px }
   @media (max-width:760px) { .grid { grid-template-columns:1fr } }
   .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px }
@@ -63,14 +68,21 @@
       <a class="cta" id="dl" href="https://github.com/KimTaekGwan/desktop-pet-releases/releases/latest"><span data-ko>⬇ macOS용 다운로드</span><span data-en>⬇ Download for macOS</span></a>
       <div class="meta"><span data-ko>무료 · macOS 13 이상 · Apple Silicon/Intel · 외부 의존성 없음</span><span data-en>Free · macOS 13+ · Apple Silicon/Intel · no third-party dependencies</span> · <span id="ver"></span></div>
     </div>
-    <div class="scene" aria-hidden="true">
-      <div class="notch"></div>
-      <div class="win"></div>
-      <img class="pet" src="pomu.png" alt="" style="left:170px; top:-6px; transform:scale(.9)">
-      <div class="bubble" style="left:118px; top:-2px">빌드 중…</div>
-      <img class="pet" src="tori.png" alt="" style="left:300px; top:142px">
-      <img class="pet" src="nubi.png" alt="" style="left:60px; top:142px">
-      <div class="bubble" style="left:280px; top:118px">✓ 테스트 통과</div>
+    <div>
+      <div class="scene" aria-hidden="true">
+        <div class="notch"></div>
+        <div class="win"></div>
+        <img class="pet" src="pomu.png" alt="" style="left:170px; top:-6px; transform:scale(.9)">
+        <div class="bubble" style="left:118px; top:-2px">빌드 중…</div>
+        <img class="pet" src="tori.png" alt="" style="left:300px; top:142px">
+        <img class="pet" src="nubi.png" alt="" style="left:60px; top:142px">
+        <div class="bubble" style="left:280px; top:118px">✓ 테스트 통과</div>
+        <canvas id="demo"></canvas>
+      </div>
+      <div class="chars">
+        <span data-ko>설치 후와 같은 펫 — 끌어 보고, 클릭해 보세요:</span><span data-en>The same pet you get after installing — drag it, click it:</span>
+        <button data-char="pomu">Pomu</button><button data-char="tori">Tori</button><button data-char="nubi">Nubi</button>
+      </div>
     </div>
   </section>
 
@@ -127,5 +139,7 @@ curl -X POST localhost:9090/task/complete -d '{"task_id":1}'</pre>
   (function(){ var s=null; try{s=localStorage.getItem('lang')}catch(e){} setLang(s || ((navigator.language||'').startsWith('ko')?'ko':'en')); })();
   fetch('../latest.json').then(r=>r.json()).then(j=>{ document.getElementById('ver').textContent='v'+j.version; document.getElementById('dl').href=j.url; }).catch(()=>{});
 </script>
+<script src="demo.js" defer></script>
+
 </body>
 </html>

@@ -1,0 +1,106 @@
+{
+  "afterSitSlow" : 3.3999999999999999,
+  "blinkClosed" : 0.23000000000000001,
+  "blinkInterval" : [
+    4.4000000000000004,
+    7.2999999999999998
+  ],
+  "breathe" : {
+    "idle" : [
+      1.02,
+      3.2000000000000002
+    ],
+    "sit" : [
+      1.0249999999999999,
+      3.3999999999999999
+    ],
+    "sleep" : [
+      1.0249999999999999,
+      2.7999999999999998
+    ]
+  },
+  "dragThreshold" : 7,
+  "frameWeights" : {
+    "eat" : [
+      1,
+      1,
+      2.5,
+      1
+    ],
+    "happy" : [
+      1,
+      2,
+      1,
+      1
+    ],
+    "stunned" : [
+      2.5,
+      1,
+      1
+    ],
+    "wave" : [
+      1,
+      1,
+      2,
+      1
+    ]
+  },
+  "headLift" : 0.14999999999999999,
+  "heart" : {
+    "rise" : 0.90000000000000002,
+    "scaleFrom" : 0.71999999999999997,
+    "scaleTo" : 1.05,
+    "visible" : 1.1000000000000001
+  },
+  "hitReaction" : 0.14999999999999999,
+  "idleHold" : [
+    3,
+    7
+  ],
+  "idleHoldSlow" : 9,
+  "landingSettle" : 0.32000000000000001,
+  "lean" : {
+    "angleDeg" : 1.3999999999999999,
+    "count" : 2,
+    "duration" : 0.59999999999999998,
+    "offset" : 3
+  },
+  "markBounce" : 0.62,
+  "postureWeights" : {
+    "sitting" : {
+      "sit" : 3,
+      "sleep" : 6,
+      "stretch" : 1,
+      "walk" : 2
+    },
+    "standing" : {
+      "sit" : 6,
+      "sleep" : 1,
+      "stretch" : 2,
+      "walk" : 3
+    }
+  },
+  "shadow" : {
+    "alpha" : [
+      0.22,
+      0.050000000000000003
+    ],
+    "liftReach" : 200,
+    "scale" : [
+      1,
+      0.59999999999999998
+    ]
+  },
+  "sitHold" : [
+    4,
+    9
+  ],
+  "sitHoldSlow" : [
+    20,
+    60
+  ],
+  "stretchDuration" : 2.3999999999999999,
+  "throwLook" : 0.29999999999999999,
+  "throwWindUp" : 0.59999999999999998,
+  "walkSpeed" : 28
+}
