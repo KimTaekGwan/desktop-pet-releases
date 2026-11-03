@@ -14,6 +14,17 @@
 <body><main>
 <p><a href="../">← Desktop Pet</a></p>
 <h1>업데이트 내역 · What's new</h1>
+
+<h2>0.3.2 <span class="d">2026-11-04</span></h2>
+<ul>
+  <li><b>살아 있어 보이는 타이밍</b> (Workcat 벤치마크): 깜빡임 2초마다 → 4.4~7.3초에 한 번 0.23초, 먹기·기쁨·기절·손 흔들기의 정점 프레임을 2~3배 붙잡음(캐릭터 manifest <code>frameWeights</code>로 조정), 착지·놓은 뒤 0.32초 숨 고르기, 잠·앉기·idle 모두 숨쉬기(정지 상태 없음), 걸음 fps가 실제 속도에 비례(발 미끄러짐 제거)</li>
+  <li><b>인과 비트</b>: 공 던지기는 상대를 보고 0.3초 멈춘 뒤 던지고 공이 튕긴 150ms 뒤에 맞음, 에이전트 완료는 고개 들기 → 기쁨 → ✓, 확인 요청 <code>!</code>는 머리 옆에 고정돼 바운스하고 클릭해 확인하면 떨어짐, 쓰다듬기는 콩콩 대신 몸 기울임 2회 + ♥ 하나, 간지럼 끝 숨 고르기</li>
+  <li><b>촉감</b>: 드래그 임계 3 → 7pt(짧은 클릭이 들기로 새지 않음), 들리면 <code>held</code> 포즈(내장 3종), 그림자를 앞·뒤 모드에도 — 들리면 옅고 작게, 매달리면 숨김. 공이 날아오는 동안 상대를 들고 있으면 빗나가고 던진 쪽이 시무룩</li>
+  <li><b>자세의 단계</b>: <code>sit</code> 포즈(내장 3종) + 자세별 가중치(서 있음: 앉기 6/기지개 2/걷기 3/잠 1, 앉음: 잠 6/앉기 3/걷기 2/기지개 1) — 앉았다가 잔다. 월페이퍼·고정·조용히 모드는 앉기 20~60초 유지. 자기 전·깬 뒤 기지개</li>
+  <li><b>창 가리키기</b>: <code>petctl agent attention|review</code>가 보낸 셸의 조상 pid를 함께 보내면, 앞 모드의 펫이 그 터미널 창 아래 테두리로 걸어가 매달린 채 <code>!</code>. 창이 없거나 너무 높으면 제자리에서</li>
+  <li><b>랜딩 데모</b>: 공개 랜딩에 설치본과 같은 시트·같은 숫자(<code>motion.json</code>)·같은 행동 규칙으로 움직이는 캔버스 펫(끌기·클릭·캐릭터 3종), &quot;정하지 않은 것&quot; 한 줄</li>
+  <li>캐릭터 폴더의 선택 행 <code>held</code>·<code>sit</code>, manifest <code>frameWeights</code>. 모션 상수는 <code>PetKit.Motion</code> 한 곳</li>
+</ul>
 <p class="d" style="margin-left:0"><b>정하지 않은 것 · Undecided</b> — 가격은 미정(지금은 무료), iOS 앱은 보류, 위젯은 Xcode 서명 빌드에서만 데이터가 보입니다. 쇼츠·탭을 대신 닫아 주는 식의 개입은 하지 않기로 했습니다.<br>Pricing undecided (free for now), the iOS app is on hold, the widget shows data only in Xcode-signed builds. We decided against interventions like closing tabs for you.</p>
 
 
